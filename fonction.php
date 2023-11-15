@@ -57,7 +57,8 @@ $conn->close();
 function insert_table($servername, $username, $password, $dbname,$titre, $description, $prix, $telephone, $email){
     $conn = new mysqli($servername, $username, $password, $dbname);
     $sql ="INSERT INTO annonces (titre, description, prix, telephone, email) VALUES ('$titre', '$description', $prix, '$telephone', '$email')";
-
+    $conn->query($sql);
+    $conn->close();
 }
 
 connection_data($servername, $username, $password,$dbname);
