@@ -15,7 +15,7 @@
         </div>
         <form class="form" id="form">
             <div class="form-control ">
-                <label for="">titre de Annonce</label>
+                <label for="">Titre de Annonce</label>
                 <input type="text" name="titre" >
 
             </div>
@@ -28,12 +28,17 @@
                 <label for="">Prix:</label>
                 <input type="text"  name="prix">
             </div>
-          
-
-
+            <div class="form-control ">
+                <label for="">Telephone:</label>
+                <input type="text"  name="telephone">
+            </div>
+            <div class="form-control ">
+                <label for="">Email:</label>
+                <input type="email"  name="email">
+            </div>
             <button type="submit"> <i class="fas fa-user-plus"></i> S'inscrire</button>
-        </form>
+            </form>
+            </div>
     </div>
-    
 </body>
 </html>
