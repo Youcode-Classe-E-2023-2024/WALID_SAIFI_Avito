@@ -1,6 +1,4 @@
-<?php
-include("creation.php");
- ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +12,7 @@ include("creation.php");
         <div class="header">
             <h2>Ajouter un Annonce</h2>
         </div>
-        <form class="form" id="form" method="post" action="ajouter.php">
+        <form class="form" id="form" method="post" action="insert.php">
             <div class="form-control ">
                 <label for="">Titre de Annonce</label>
                 <input type="text" name="titre" >
@@ -41,8 +39,5 @@ include("creation.php");
             </form>
             </div>
     </div>
-          <?php
-           include("insert.php");
-           ?>
 </body>
 </html>
