@@ -1,6 +1,4 @@
-<?php
-    include('create_data.php');
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
