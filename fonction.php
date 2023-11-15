@@ -17,7 +17,7 @@ $conn = new mysqli($servername, $username, $password);
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 $test_bd=$conn->query($sql);
 if ($test_bd) {
-   echo "La base de données '$dbname' a été créée avec succès.\n";
+   //echo "La base de données '$dbname' a été créée avec succès.\n";
 } else {
     echo "Erreur lors de la création de la base de données : " . $conn->error;
 }
@@ -44,18 +44,35 @@ $sql = "CREATE TABLE IF NOT EXISTS annonces (
 )";
 $test_table=$conn->query($sql);
 if ($test_table){
-    echo "La table 'annonces' a été créée avec succès.\n";
+   // echo "La table 'annonces' a été créée avec succès.\n";
 } else {
     echo "Erreuqueryr lors de la création de la table 'annonces' : " . $conn->error;
 }
 $conn->close();
 }
 /**
+ * 
  * la appelle des fonction
  */
+function insert_table($servername, $username, $password, $dbname,$titre, $description, $prix, $telephone, $email){
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    $sql ="INSERT INTO annonces (titre, description, prix, telephone, email) VALUES ('$titre', '$description', $prix, '$telephone', '$email')";
 
+}
 
 connection_data($servername, $username, $password,$dbname);
 create_table($servername, $username, $password, $dbname);
+if(isset($_POST["titre"])  && isset($_POST["description"]) && isset($_POST["prix"]) && isset($_POST["telephone"]) && isset($_POST["email"])){
+$titre = $_POST["titre"];
+$description = $_POST["description"];
+$prix = $_POST["prix"];
+$telephone = $_POST["telephone"];
+$email = $_POST["email"];
+insert_table($servername, $username, $password, $dbname, $titre, $description, $prix, $telephone, $email); 
+header("ajouter.php");
+}
+
+
+
 
 ?>

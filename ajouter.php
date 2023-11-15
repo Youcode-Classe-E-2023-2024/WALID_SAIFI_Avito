@@ -1,5 +1,6 @@
-
-
+<?php
+include("fonction.php");
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
         <div class="header">
             <h2>Ajouter un Annonce</h2>
         </div>
-        <form class="form" id="form">
+        <form class="form" id="form" method="post" action="ajouter.php">
             <div class="form-control ">
                 <label for="">Titre de Annonce</label>
                 <input type="text" name="titre" >
