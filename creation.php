@@ -6,6 +6,7 @@ $dbname = "Annonce_avito";
 /**
  * Établit une connexion à la base de données MySQL et crée une base de données si elle n'existe pas.
  *
+ * 
  * @param string $servername Le nom du serveur MySQL.
  * @param string $username Le nom d'utilisateur MySQL.
  * @param string $password Le mot de passe MySQL.
@@ -26,6 +27,7 @@ $conn->close();
 /**
  * Établit une connexion à une base de données existante et crée une table 'annonces' si elle n'existe pas.
  *
+ * 
  * @param string $servername Le nom du serveur MySQL.
  * @param string $username Le nom d'utilisateur MySQL.
  * @param string $password Le mot de passe MySQL.
@@ -50,30 +52,6 @@ if ($test_table){
 }
 $conn->close();
 }
-/**
- * 
- * la appelle des fonction
- */
-function insert_table($servername, $username, $password, $dbname,$titre, $description, $prix, $telephone, $email){
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    $sql ="INSERT INTO annonces (titre, description, prix, telephone, email) VALUES ('$titre', '$description', $prix, '$telephone', '$email')";
-    $conn->query($sql);
-    $conn->close();
-}
-
 connection_data($servername, $username, $password,$dbname);
 create_table($servername, $username, $password, $dbname);
-if(isset($_POST["titre"])  && isset($_POST["description"]) && isset($_POST["prix"]) && isset($_POST["telephone"]) && isset($_POST["email"])){
-$titre = $_POST["titre"];
-$description = $_POST["description"];
-$prix = $_POST["prix"];
-$telephone = $_POST["telephone"];
-$email = $_POST["email"];
-insert_table($servername, $username, $password, $dbname, $titre, $description, $prix, $telephone, $email); 
-header("ajouter.php");
-}
-
-
-
-
 ?>

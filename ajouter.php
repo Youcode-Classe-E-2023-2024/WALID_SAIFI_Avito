@@ -1,5 +1,5 @@
 <?php
-include("fonction.php");
+include("creation.php");
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,5 +41,8 @@ include("fonction.php");
             </form>
             </div>
     </div>
+          <?php
+           include("insert.php");
+           ?>
 </body>
 </html>
