@@ -7,31 +7,10 @@
     <title>Liste des Annonces</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body class="container_bady">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Mon Site</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">À propos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<body>
+  
+
+<div class="cont_ajout">
 <div class="containre_table">
 <table class="table table-dark">
        <thead class="thead-dark">
@@ -61,7 +40,7 @@
                     echo "<tr>";
                     echo "<td>" . $row["id"] . "</td>";
                     echo "<td>" . $row["titre"] . "</td>";
-                    echo "<td>" . $row["Description"] . "</td>";
+                    echo "<td>" . $row["description"] . "</td>";
                     echo "<td>" . $row["prix"] . "</td>";
                     echo "<td>" . $row["telephone"] . "</td>";
                     echo "<td>" . $row["email"] . "</td>";
