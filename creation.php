@@ -24,26 +24,21 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("La connexion a échoué : " . $conn->connect_error);
 }
-
 $sql = "CREATE TABLE IF NOT EXISTS annonces (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    titre VARCHAR(85) NOT NULL,
-    description TEXT NOT NULL,
-    prix DECIMAL(10, 2) NOT NULL,
-    telephone VARCHAR(85) NOT NULL,
-    email VARCHAR(85) NOT NULL
+    titre VARCHAR(85) ,
+    Description VARCHAR(85) ,
+    prix DECIMAL(10, 2) ,
+    telephone VARCHAR(85) ,
+    email VARCHAR(85)
 )";
 if ($conn->query($sql) === TRUE) {
-    // echo "La table 'annonces' a été créée avec succès.\n";
+    echo "La table 'annonces' a été créée avec succès.\n";
 } else {
     echo "Erreur lors de la création de la table 'annonces' : " . $conn->error;
 }
 
 $conn->close();
 
-// Connexion à la base de données pour insérer les données du formulaire
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("La connexion a échoué : " . $conn->connect_error);
-}
+
 ?>
