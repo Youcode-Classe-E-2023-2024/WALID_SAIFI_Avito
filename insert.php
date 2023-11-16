@@ -1,5 +1,5 @@
 <?php
-include 'creation.php';
+require_once("creation.php");
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -40,6 +40,5 @@ if ($stmt->execute()) {
     echo "Erreur : " . $insertSql . "<br>" . $stmt->error;
 }
 $stmt->close();
-Utilisation de requêtes préparées avec bind_param pour renforcer la sécurité contre les injections SQL
 
 ?>
