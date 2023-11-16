@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-Zt4Jx1qWlKXNlH5+PiMqYYBpn6F5iDz1TK7WdA0qDEIHxAg/6AebVyfrt7paD7kp" crossorigin="anonymous"></script>
     <title>Ajouter Annonce</title>
 </head>
-<body>
+<body class="container_bady">
 <div class="container">
         <div class="header">
             <h2>Ajouter un Annonce</h2>
