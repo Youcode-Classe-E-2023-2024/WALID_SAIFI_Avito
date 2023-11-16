@@ -33,12 +33,11 @@ $sql = "CREATE TABLE IF NOT EXISTS annonces (
     email VARCHAR(85)
 )";
 if ($conn->query($sql) === TRUE) {
-    echo "La table 'annonces' a été créée avec succès.\n";
+   // echo "La table 'annonces' a été créée avec succès.\n";
 } else {
     echo "Erreur lors de la création de la table 'annonces' : " . $conn->error;
 }
 
-$conn->close();
 
 
 ?>

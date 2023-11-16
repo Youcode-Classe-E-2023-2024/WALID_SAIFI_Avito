@@ -39,6 +39,6 @@ if ($stmt->execute()) {
 } else {
     echo "Erreur : " . $insertSql . "<br>" . $stmt->error;
 }
-$stmt->close();
+
 
 ?>

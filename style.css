@@ -100,3 +100,10 @@ body{
     color: var(--color-error);
     visibility: visible;
 }
+.containre_table{
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.5);
+    width: 900px;
+    max-width: 100%;
+
+}
