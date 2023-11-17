@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-Zt4Jx1qWlKXNlH5+PiMqYYBpn6F5iDz1TK7WdA0qDEIHxAg/6AebVyfrt7paD7kp" crossorigin="anonymous"></script>
     <title>Ajouter Annonce</title>
 </head>
 <body>
     <div class="cont_ajout">
-<div class="container">
+         <div class="container">
         <div class="header">
             <h2>Ajouter un Annonce</h2>
         </div>
