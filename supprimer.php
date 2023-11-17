@@ -1,8 +1,6 @@
 <?php
 
 require_once 'creation.php';
-$conn = new mysqli($servername, $username, $password, $dbname);
-
 $id = $_GET["id"];
 
 $sql = "DELETE FROM annonces WHERE id = $id";
