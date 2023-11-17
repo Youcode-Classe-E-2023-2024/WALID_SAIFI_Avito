@@ -12,12 +12,12 @@
     h2 {
     text-align: center;
     padding: 20px; 
-    background-color: #f4f4f4; 
+    background-color: #4CAF50; 
     border-radius: 5px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    color: #ff0000;
+    color: black;
+    font-size: 70px;
 }
-
     .navbar {
       overflow: hidden;
       background-color: #4CAF50; 
