@@ -9,6 +9,14 @@
       margin: 0;
       font-family: Arial, sans-serif;
     }
+    h2 {
+    text-align: center;
+    padding: 20px; 
+    background-color: #f4f4f4; 
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    color: #ff0000;
+}
 
     .navbar {
       overflow: hidden;
@@ -72,7 +80,7 @@
   </div>
 
   <div class="content">
-    <h2>La list des Annonce.</h2>
+    <h2>List des Annonce.</h2>
    
     <table>
       <thead>
@@ -110,8 +118,6 @@
             } else {
                 echo "<tr><td colspan='7'>Aucune annonce trouvée</td></tr>";
             }
-            
-
             $conn->close();
             ?>
       </tbody>
