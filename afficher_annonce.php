@@ -80,7 +80,7 @@
   </div>
 
   <div class="content">
-    <h2>List des Annonce.</h2>
+    <h2>Liste des Annonces</h2>
    
     <table>
       <thead>
