@@ -96,12 +96,29 @@
       </thead>
       <tbody>
         <?php
-            require_once("creation.php");
-            $selectSql = "SELECT * FROM annonces";
-            $result = $conn->query($selectSql);
+            /**
+            * Ce script affiche toutes les annonces dans un tableau HTML avec des liens
+            * de modification et de suppression.
+            */
 
+            require_once("creation.php");
+            /**
+             * Définir la requête SQL pour sélectionner toutes les annonces
+             */
+            $selectSql = "SELECT * FROM annonces";
+            /**
+             * Exécuter la requête SQL
+             */
+            $result = $conn->query($selectSql);
+               /**
+                * Vérifier si des annonces ont été trouvées
+                */
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
+                  /**
+                   * Parcourir les résultats de la requête
+                   * est afficher chaque annonce dans une ligne de tableau HTML
+                   */
                     echo "<tr>";
                     echo "<td>" . $row["id"] . "</td>";
                     echo "<td>" . $row["titre"] . "</td>";
@@ -110,12 +127,16 @@
                     echo "<td>" . $row["telephone"] . "</td>";
                     echo "<td>" . $row["email"] . "</td>";
                     echo "<td>";
+                    /**
+                     * Ajouter des liens pour la modification et la suppression avec des boutons 
+                     */
                     echo "<a href='modifier.php?id=" . $row["id"] . "'><button style='background-color:#4CAF50; color: white; padding: 8px 12px; margin-right: 10px; border: none; cursor: pointer; font-size: 14px; border-radius: 4px;'>Modifier</button>";
                     echo "<a href='supprimer.php?id=" . $row["id"] . "'> <button style='background-color: #ff0000; color: white; padding: 8px 12px; border: none; cursor: pointer; font-size: 14px; border-radius: 4px;'>Supprimer</button>";
                     echo "</td>";
                     echo "</tr>";
                 }
             } else {
+              // Afficher un message si aucune annonce n'est trouvée
                 echo "<tr><td colspan='7'>Aucune annonce trouvée</td></tr>";
             }
             $conn->close();
